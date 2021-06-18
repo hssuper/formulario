@@ -16,7 +16,6 @@ for (var i = [0]; i < suiteEscolhida.length; i++) {
         almoco.checked = true;
     }
 }
-
 //Nome Completo
 nome = document.getElementById('nome');
 
@@ -29,8 +28,6 @@ function validaNome() {
     }
     nome.setCustomValidity(msgNome);
 }
-
-
 //E-mail
 email = document.querySelector('#email');
 email.addEventListener('blur', validaEmail(), false,);
@@ -46,6 +43,29 @@ function validaEmail() {
     email.setCustomValidity(msgEmail);
 }
 //Tratando do CPF
+cpf = document.querySelector('#cpf');
+cpf.addEventListener('blur', (eventoLegal) => {
+    verificaCpf(eventoLegal.target);
+})
+function verificaCpf(input) {
+    var  expCpf = /(\d{3})(\d{3})(\d{3})(\d{2})/g;
+    var  cpfVerificado = expCpf.exec(input.value);
+    var msgCPF = '';
+    if(!cpfVerificado){
+        msgCPF = 'Digite apenas Numeros'
+
+    }
+    input.setCustomValidity(msgCPF);
+    formataCpf(input.value);
+
+    function formataCpf(valorCpf, cpfExp){
+        var cpfFormatado = valorCpf.replace(cpfExp,function(vregex,p1,p2,p3,p4){
+            return p1 + '.'+ p2 + '.' + p3 + '.' + p4;
+        })
+        return cpfFormatado;
+    }
+}
+
 
 
 
