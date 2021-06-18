@@ -55,8 +55,8 @@ function verificaCpf(input) {
         msgCPF = 'Digite apenas Numeros'
 
     }
-    input.setCustomValidity(msgCPF);
-    formataCpf(input.value);
+    cpfCompleto.setCustomValidity(msgCPF);
+    cpf.value = cpfComPontos;
 
     function formataCpf(valorCpf, cpfExp){
         var cpfFormatado = valorCpf.replace(cpfExp,function(vregex,p1,p2,p3,p4){
