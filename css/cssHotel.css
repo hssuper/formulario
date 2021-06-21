@@ -33,7 +33,7 @@ body{
 }
 .formulario input, select{
     width: 100%;
-    border: 1px solid chocolate;
+    border: 1px solid rgb(0, 204, 255);
     border-radius: 5px;
     margin-bottom: 10px;
     font-size: 16px;
@@ -47,12 +47,13 @@ body{
 
 }
 .formulario input:focus-within{
-    border:2px solid tomato;
+    border:2px solid rgb(0, 242, 250);
 }
 label{
     font-size: 12px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 800;
+    color: rgb(0, 60, 255);
 }
 .form-col-1{
     width: 48%;
@@ -75,12 +76,12 @@ label{
     margin: 0 auto;
     width: 300px;
     height: 70px;
-    background-color: tomato;
+    background-color: rgb(0, 204, 255);
     border-radius: 5px;
     color: white;
 }
 .botao:hover{
-    background-color: brown;
+    background-color: rgb(42, 54, 165);
 }
 .link{
     color: white;
@@ -92,7 +93,7 @@ label{
     position: fixed;
     bottom: 0;
     right: 10px;
-    background-color: brown;
+    background-color: rgb(0, 250, 187);
     width: 300px;
     height: 120px;
     color: white;
